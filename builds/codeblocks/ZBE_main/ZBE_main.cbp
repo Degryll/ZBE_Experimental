@@ -1,0 +1,354 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="ZBE_main" />
+		<Option pch_mode="2" />
+		<Option compiler="mingw_64-bit_compiler" />
+		<Build>
+			<Target title="Debug-Win64">
+				<Option output="../../../bin/Debug/ZBE_main" prefix_auto="1" extension_auto="1" />
+				<Option working_dir="../../.." />
+				<Option object_output="obj/Debug/" />
+				<Option type="1" />
+				<Option compiler="msys2_mingw_64-bit_compiler-920" />
+				<Compiler>
+					<Add option="-Weffc++" />
+					<Add option="-pedantic" />
+					<Add option="-Wextra" />
+					<Add option="-Wall" />
+					<Add option="-m64" />
+					<Add option="-g" />
+					<Add option="-isystem ../../../extlibs/json" />
+					<Add option="-isystem ../../../extlibs/glm/0.9.9.0" />
+					<Add option="-isystem ../../../extlibs/tinyobjloader" />
+					<Add option="-isystem ../../../extlibs\ChaiScript-6.1.0" />
+					<Add option="-std=c++17" />
+					<Add option="-D_GLIBCXX_USE_CXX11_ABI=0" />
+					<Add directory="../../../src/ZBE_main/include" />
+					<Add directory="../../../include" />
+					<Add directory="../../../extlibs/utf8cpp/source" />
+					<Add directory="../../../extlibs/boost_1_57_0" />
+					<Add directory="../../../extlibs/IteratorTypeErasure/IteratorTypeErasure/any_iterator" />
+					<Add directory="../../../extlibs/SDL2/2.0.8/include" />
+					<Add directory="../../../extlibs/SDL2/2.0.8/include/SDL2" />
+					<Add directory="../../../extlibs/SDL2_image/2.0.1/x86_64-w64-mingw32/include" />
+					<Add directory="../../../extlibs/SDL2_ttf/2.0.14/x86_64-w64-mingw32/include" />
+					<Add directory="../../../extlibs/SDL2_mixer/2.0.2/include" />
+					<Add directory="../../../extlibs/json" />
+					<Add directory="../../../extlibs/GLEW/2.1.0/include" />
+					<Add directory="../../../extlibs/lodePNG" />
+					<Add directory="../../../extlibs/glm/0.9.9.0" />
+					<Add directory="../../../extlibs/Vulkan/1.1.77.0/include" />
+					<Add directory="../../../extlibs/tinyobjloader" />
+					<Add directory="../../../extlibs/SDL2_net/2.0.1/include" />
+					<Add directory="../../../extlibs/OALSoft/1.18.2/include" />
+					<Add directory="../../../extlibs/stb_vorbis" />
+					<Add directory="../../../extlibs/ChaiScript-6.1.0/include" />
+					<Add directory="../../../extlibs/tinygltf" />
+					<Add directory="../../../extlibs/stb_image" />
+				</Compiler>
+				<Linker>
+					<Add option="-m64" />
+					<Add library="mingw32" />
+					<Add library="ZBE_x64d" />
+					<Add library="SDL2main" />
+					<Add library="SDL2" />
+					<Add library="SDL2_image" />
+					<Add library="SDL2_ttf" />
+					<Add library="SDL2_mixer" />
+					<Add library="SDL2_net" />
+					<Add library="glew32" />
+					<Add library="openGL32" />
+					<Add library="vulkan-1" />
+					<Add library="OpenAL32" />
+					<Add library="glfw3" />
+					<Add library="glfw" />
+					<Add directory="../../../lib" />
+					<Add directory="../../../extlibs/SDL2/2.0.8/x86_64-w64-mingw32/lib" />
+					<Add directory="../../../extlibs/SDL2_image/2.0.1/x86_64-w64-mingw32/lib" />
+					<Add directory="../../../extlibs/SDL2_ttf/2.0.14/x86_64-w64-mingw32/lib" />
+					<Add directory="../../../extlibs/SDL2_mixer/2.0.2/x86_64-w64-mingw32/lib" />
+					<Add directory="../../../extlibs/SDL2_net/2.0.1/x86_64-w64-mingw32/lib" />
+					<Add directory="../../../extlibs/GLEW/2.1.0/windows/lib/Release/x64" />
+					<Add directory="../../../extlibs/Vulkan/1.1.77.0/windows/lib" />
+					<Add directory="../../../extlibs/OALSoft/1.18.2/windows/lib" />
+				</Linker>
+			</Target>
+			<Target title="Release-Win64">
+				<Option output="../../../bin/Release/ZBE_main" prefix_auto="1" extension_auto="1" />
+				<Option working_dir="../../.." />
+				<Option object_output="obj/Release/" />
+				<Option type="1" />
+				<Option compiler="msys2_mingw_64-bit_compiler-920" />
+				<Compiler>
+					<Add option="-O2" />
+					<Add option="-m64" />
+					<Add option="-isystem ../../../extlibs/json" />
+					<Add option="-isystem ../../../extlibs/glm/0.9.9.0" />
+					<Add option="-isystem ../../../extlibs/tinyobjloader" />
+					<Add option="-isystem ../../../extlibs/ChaiScript-6.1.0/include" />
+					<Add option="-isystem ../../../extlibs/imgui-1.76" />
+					<Add option="-isystem ../../../extlibs/imgui-1.76/examples" />
+					<Add option="-std=c++17" />
+					<Add option="-D_GLIBCXX_USE_CXX11_ABI=0" />
+					<Add directory="../../../src/ZBE_main/include" />
+					<Add directory="../../../include" />
+					<Add directory="../../../extlibs/boost_1_57_0" />
+					<Add directory="../../../extlibs/IteratorTypeErasure/IteratorTypeErasure/any_iterator" />
+					<Add directory="../../../extlibs/SDL2/2.0.8/include" />
+					<Add directory="../../../extlibs/SDL2/2.0.8/include/SDL2" />
+					<Add directory="../../../extlibs/SDL2_image/2.0.1/x86_64-w64-mingw32/include" />
+					<Add directory="../../../extlibs/SDL2_ttf/2.0.14/x86_64-w64-mingw32/include" />
+					<Add directory="../../../extlibs/SDL2_net/2.0.1/include" />
+					<Add directory="../../../extlibs/json" />
+					<Add directory="../../../extlibs/GLEW/2.1.0/include" />
+					<Add directory="../../../extlibs/lodePNG" />
+					<Add directory="../../../extlibs/glm/0.9.9.0" />
+					<Add directory="../../../extlibs/Vulkan/1.1.77.0/include" />
+					<Add directory="../../../extlibs/SDL2_mixer/2.0.2/include" />
+					<Add directory="../../../extlibs/tinyobjloader" />
+					<Add directory="../../../extlibs/OALSoft/1.18.2/include" />
+					<Add directory="../../../extlibs/stb_vorbis" />
+					<Add directory="../../../extlibs/ChaiScript-6.1.0/include" />
+					<Add directory="../../../extlibs/imgui-1.76" />
+					<Add directory="../../../extlibs/imgui-1.76/examples" />
+					<Add directory="../../../extlibs/tinygltf" />
+					<Add directory="../../../extlibs/stb_image" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+					<Add option="-m64" />
+					<Add library="ZBE_x64" />
+					<Add library="mingw32" />
+					<Add library="SDL2main" />
+					<Add library="SDL2" />
+					<Add library="SDL2_image" />
+					<Add library="SDL2_ttf" />
+					<Add library="SDL2_mixer" />
+					<Add library="SDL2_net" />
+					<Add library="opengl32" />
+					<Add library="glew32" />
+					<Add library="vulkan-1" />
+					<Add library="OpenAL32" />
+					<Add directory="../../../lib" />
+					<Add directory="../../../extlibs/SDL2/2.0.8/x86_64-w64-mingw32/lib" />
+					<Add directory="../../../extlibs/SDL2_image/2.0.1/x86_64-w64-mingw32/lib" />
+					<Add directory="../../../extlibs/SDL2_ttf/2.0.14/x86_64-w64-mingw32/lib" />
+					<Add directory="../../../extlibs/SDL2_mixer/2.0.2/x86_64-w64-mingw32/lib" />
+					<Add directory="../../../extlibs/SDL2_net/2.0.1/x86_64-w64-mingw32/lib" />
+					<Add directory="../../../extlibs/GLEW/2.1.0/windows/lib/Release/x64" />
+					<Add directory="../../../extlibs/Vulkan/1.1.77.0/windows/lib" />
+					<Add directory="../../../extlibs/OALSoft/1.18.2/windows/lib" />
+				</Linker>
+			</Target>
+			<Target title="Debug-Linux64">
+				<Option output="../../../bin/Debug/ZBE_main" prefix_auto="1" extension_auto="1" />
+				<Option working_dir="../../.." />
+				<Option object_output="obj/Debug/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-Weffc++" />
+					<Add option="-pedantic" />
+					<Add option="-Wextra" />
+					<Add option="-Wall" />
+					<Add option="-m64" />
+					<Add option="-g" />
+					<Add option="-isystem ../../../extlibs/json" />
+					<Add option="-isystem ../../../extlibs/glm/0.9.9.0" />
+					<Add option="-isystem ../../../extlibs/tinyobjloader" />
+					<Add option="-isystem ../../../extlibs\ChaiScript-6.1.0" />
+					<Add option="-std=c++17" />
+					<Add option="`sdl-config --cflags --libs`" />
+					<Add directory="../../../src/ZBE_main/include" />
+					<Add directory="../../../include" />
+					<Add directory="../../../extlibs/utf8cpp/source" />
+					<Add directory="../../../extlibs/boost_1_57_0" />
+					<Add directory="../../../extlibs/IteratorTypeErasure/IteratorTypeErasure/any_iterator" />
+					<Add directory="../../../extlibs/SDL2/2.0.8/include" />
+					<Add directory="../../../extlibs/SDL2_image/2.0.0/x86_64-linux-gcc/include" />
+					<Add directory="../../../extlibs/SDL2_ttf/2.0.12/x86_64-linux-gcc/include" />
+					<Add directory="../../../extlibs/json" />
+					<Add directory="../../../extlibs/GLEW/2.1.0/include" />
+					<Add directory="../../../extlibs/lodePNG" />
+					<Add directory="../../../extlibs/glm/0.9.9.0" />
+					<Add directory="../../../extlibs/Vulkan/1.1.77.0/include" />
+					<Add directory="../../../extlibs/SDL2_mixer/2.0.2/include" />
+					<Add directory="../../../extlibs/SDL2/2.0.8/include/SDL2" />
+					<Add directory="../../../extlibs/tinyobjloader" />
+					<Add directory="../../../extlibs/OALSoft/1.18.2/include" />
+					<Add directory="../../../extlibs/stb_vorbis" />
+					<Add directory="../../../extlibs/SDL2_net/2.0.1/include" />
+					<Add directory="../../../extlibs/ChaiScript-6.1.0/include" />
+					<Add directory="../../../extlibs/imgui-1.76" />
+					<Add directory="../../../extlibs/imgui-1.76/examples" />
+					<Add directory="../../../extlibs/tinygltf" />
+					<Add directory="../../../extlibs/stb_image" />
+				</Compiler>
+				<Linker>
+					<Add option="-m64" />
+					<Add library="ZBE_x64d" />
+					<Add library="SDL2main" />
+					<Add library="SDL2" />
+					<Add library="SDL2_image" />
+					<Add library="SDL2_ttf" />
+					<Add library="SDL2_mixer" />
+					<Add library="SDL2_net" />
+					<Add library="GL" />
+					<Add library="GLEW" />
+					<Add library="vulkan" />
+					<Add library="openal" />
+					<Add library="pthread" />
+					<Add library="dl" />
+					<Add directory="../../../lib" />
+					<Add directory="../../../extlibs/SDL2/2.0.8/linux64/lib" />
+					<Add directory="../../../extlibs/SDL2_image/2.0.0/x86_64-linux-gcc/lib" />
+					<Add directory="../../../extlibs/SDL2_ttf/2.0.12/x86_64-linux-gcc/lib" />
+					<Add directory="../../../extlibs/GLEW/2.1.0/linux/lib" />
+					<Add directory="../../../extlibs/Vulkan/1.1.77.0/linux/lib" />
+					<Add directory="../../../extlibs/SDL2_mixer/2.0.2/linux/lib" />
+					<Add directory="../../../extlibs/OALSoft/1.18.2/linux/lib" />
+					<Add directory="../../../extlibs/SDL2_net/2.0.1/linux/lib" />
+				</Linker>
+			</Target>
+			<Target title="Release-Linux64">
+				<Option output="../../../bin/Release/ZBE_main" prefix_auto="1" extension_auto="1" />
+				<Option working_dir="../../.." />
+				<Option object_output="obj/Release/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-O2" />
+					<Add option="-m64" />
+					<Add option="-isystem ../../../extlibs/json" />
+					<Add option="-isystem ../../../extlibs/glm/0.9.9.0" />
+					<Add option="-isystem ../../../extlibs/tinyobjloader" />
+					<Add option="-isystem ../../../extlibs\ChaiScript-6.1.0" />
+					<Add option="-std=c++17" />
+					<Add option="`sdl-config --cflags --libs`" />
+					<Add directory="../../../src/ZBE_main/include" />
+					<Add directory="../../../include" />
+					<Add directory="../../../extlibs/boost_1_57_0" />
+					<Add directory="../../../extlibs/IteratorTypeErasure/IteratorTypeErasure/any_iterator" />
+					<Add directory="../../../extlibs/SDL2/2.0.8/include" />
+					<Add directory="../../../extlibs/SDL2_image/2.0.0/x86_64-linux-gcc/include" />
+					<Add directory="../../../extlibs/SDL2_ttf/2.0.12/x86_64-linux-gcc/include" />
+					<Add directory="../../../extlibs/json" />
+					<Add directory="../../../extlibs/GLEW/2.1.0/include" />
+					<Add directory="../../../extlibs/lodePNG" />
+					<Add directory="../../../extlibs/glm/0.9.9.0" />
+					<Add directory="../../../extlibs/Vulkan/1.1.77.0/include" />
+					<Add directory="../../../extlibs/SDL2_mixer/2.0.2/include" />
+					<Add directory="../../../extlibs/SDL2/2.0.8/include/SDL2" />
+					<Add directory="../../../extlibs/tinyobjloader" />
+					<Add directory="../../../extlibs/OALSoft/1.18.2/include" />
+					<Add directory="../../../extlibs/stb_vorbis" />
+					<Add directory="../../../extlibs/SDL2_net/2.0.1/include" />
+					<Add directory="../../../extlibs/ChaiScript-6.1.0/include" />
+					<Add directory="../../../extlibs/imgui-1.76" />
+					<Add directory="../../../extlibs/imgui-1.76/examples" />
+					<Add directory="../../../extlibs/tinygltf" />
+					<Add directory="../../../extlibs/stb_image" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+					<Add option="-m64" />
+					<Add library="ZBE_x64" />
+					<Add library="SDL2main" />
+					<Add library="SDL2" />
+					<Add library="SDL2_image" />
+					<Add library="SDL2_ttf" />
+					<Add library="SDL2_net" />
+					<Add library="GL" />
+					<Add library="GLEW" />
+					<Add library="vulkan" />
+					<Add library="SDL2_mixer" />
+					<Add library="openal" />
+					<Add library="pthread" />
+					<Add library="dl" />
+					<Add directory="../../../lib" />
+					<Add directory="../../../extlibs/SDL2/2.0.8/linux64/lib" />
+					<Add directory="../../../extlibs/SDL2_image/2.0.0/x86_64-linux-gcc/lib" />
+					<Add directory="../../../extlibs/SDL2_ttf/2.0.12/x86_64-linux-gcc/lib" />
+					<Add directory="../../../extlibs/GLEW/2.1.0/linux/lib" />
+					<Add directory="../../../extlibs/Vulkan/1.1.77.0/linux/lib" />
+					<Add directory="../../../extlibs/SDL2_mixer/2.0.2/linux/lib" />
+					<Add directory="../../../extlibs/OALSoft/1.18.2/linux/lib" />
+					<Add directory="../../../extlibs/SDL2_net/2.0.1/linux/lib" />
+				</Linker>
+			</Target>
+		</Build>
+		<Compiler>
+			<Add option="-Wall" />
+			<Add option="-fexceptions" />
+		</Compiler>
+		<Unit filename="../../../extlibs/imgui-1.76/examples/imgui_impl_opengl3.cpp" />
+		<Unit filename="../../../extlibs/imgui-1.76/examples/imgui_impl_sdl.cpp" />
+		<Unit filename="../../../extlibs/imgui-1.76/imgui.cpp" />
+		<Unit filename="../../../extlibs/imgui-1.76/imgui_demo.cpp" />
+		<Unit filename="../../../extlibs/imgui-1.76/imgui_draw.cpp" />
+		<Unit filename="../../../extlibs/imgui-1.76/imgui_widgets.cpp" />
+		<Unit filename="../../../extlibs/lodePNG/lodepng.cpp" />
+		<Unit filename="../../../src/ZBE_main/include/batis/entities/GameBoard.h" />
+		<Unit filename="../../../src/ZBE_main/include/batis/entities/Sign.h" />
+		<Unit filename="../../../src/ZBE_main/include/batis/events/MouseKeeper.h" />
+		<Unit filename="../../../src/ZBE_main/include/batis/events/handlers/MKBallInputHandler.h" />
+		<Unit filename="../../../src/ZBE_main/include/batis/events/handlers/MouseXKeepInputHandler.h" />
+		<Unit filename="../../../src/ZBE_main/include/batis/events/handlers/MouseYKeepInputHandler.h" />
+		<Unit filename="../../../src/ZBE_main/include/batis/events/handlers/TtpHandler.h" />
+		<Unit filename="../../../src/ZBE_main/include/batismain.h" />
+		<Unit filename="../../../src/ZBE_main/include/degryllmain.h" />
+		<Unit filename="../../../src/ZBE_main/include/game/GameReactor.h" />
+		<Unit filename="../../../src/ZBE_main/include/game/entities/GameBall.h" />
+		<Unit filename="../../../src/ZBE_main/include/game/entities/GameBlock.h" />
+		<Unit filename="../../../src/ZBE_main/include/game/entities/GameBoard.h" />
+		<Unit filename="../../../src/ZBE_main/include/game/entities/adaptors/GameBallCollisionatorAdaptor.h" />
+		<Unit filename="../../../src/ZBE_main/include/game/entities/adaptors/GameBlockCollisionerAdaptor.h" />
+		<Unit filename="../../../src/ZBE_main/include/game/events/handlers/ExitInputHandler.h" />
+		<Unit filename="../../../src/ZBE_main/include/game/events/handlers/GameBallBouncer.h" />
+		<Unit filename="../../../src/ZBE_main/include/game/events/handlers/StepInputHandler.h" />
+		<Unit filename="../../../src/ZBE_main/include/game/events/handlers/TtpHandler.h" />
+		<Unit filename="../../../src/ZBE_main/include/game/reactobjects/GameReactObjects.h" />
+		<Unit filename="../../../src/ZBE_main/include/gamemain.h" />
+		<Unit filename="../../../src/ZBE_main/include/ludo/LudoReactor.h" />
+		<Unit filename="../../../src/ZBE_main/include/ludo/behaviors/LudoBehaviors.h" />
+		<Unit filename="../../../src/ZBE_main/include/ludo/daemons/LudoDaemons.h" />
+		<Unit filename="../../../src/ZBE_main/include/ludo/drawers/LudoDrawers.h" />
+		<Unit filename="../../../src/ZBE_main/include/ludo/entities/LudoAdaptors.h" />
+		<Unit filename="../../../src/ZBE_main/include/ludo/entities/LudoAvatars.h" />
+		<Unit filename="../../../src/ZBE_main/include/ludo/entities/LudoEntities.h" />
+		<Unit filename="../../../src/ZBE_main/include/ludo/events/handlers/LudoActuators.h" />
+		<Unit filename="../../../src/ZBE_main/include/ludo/events/handlers/LudoHandlers.h" />
+		<Unit filename="../../../src/ZBE_main/include/ludo/generaltest.h" />
+		<Unit filename="../../../src/ZBE_main/include/ludo/openaltest.h" />
+		<Unit filename="../../../src/ZBE_main/include/ludo/opengltest.h" />
+		<Unit filename="../../../src/ZBE_main/include/ludo/sdlaudiotest.h" />
+		<Unit filename="../../../src/ZBE_main/include/ludomain.h" />
+		<Unit filename="../../../src/ZBE_main/include/tempcleanmain.h" />
+		<Unit filename="../../../src/ZBE_main/include/tempmain.h" />
+		<Unit filename="../../../src/ZBE_main/include/testing.h" />
+		<Unit filename="../../../src/ZBE_main/include/tinygltf/gltfmain.h" />
+		<Unit filename="../../../src/ZBE_main/include/tinygltf/shaders.h" />
+		<Unit filename="../../../src/ZBE_main/include/tinygltf/window.h" />
+		<Unit filename="../../../src/ZBE_main/src/batismain.cpp" />
+		<Unit filename="../../../src/ZBE_main/src/degryllmain.cpp" />
+		<Unit filename="../../../src/ZBE_main/src/gamemain.cpp" />
+		<Unit filename="../../../src/ZBE_main/src/ludo/apptest.cpp" />
+		<Unit filename="../../../src/ZBE_main/src/ludo/generaltest.cpp" />
+		<Unit filename="../../../src/ZBE_main/src/ludo/openaltest.cpp" />
+		<Unit filename="../../../src/ZBE_main/src/ludo/opengltest.cpp" />
+		<Unit filename="../../../src/ZBE_main/src/ludo/sdlaudiotest.cpp" />
+		<Unit filename="../../../src/ZBE_main/src/ludomain.cpp" />
+		<Unit filename="../../../src/ZBE_main/src/main.cpp" />
+		<Unit filename="../../../src/ZBE_main/src/tempcleanmain.cpp" />
+		<Unit filename="../../../src/ZBE_main/src/tempmain.cpp" />
+		<Unit filename="../../../src/ZBE_main/src/testing.cpp" />
+		<Unit filename="../../../src/ZBE_main/src/tinygltf/gltfmain.cpp" />
+		<Unit filename="../../../src/ZBE_main/src/tinygltf/shaders.cpp" />
+		<Unit filename="../../../src/ZBE_main/src/tinygltf/window.cpp" />
+		<Extensions>
+			<lib_finder disable_auto="1" />
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>

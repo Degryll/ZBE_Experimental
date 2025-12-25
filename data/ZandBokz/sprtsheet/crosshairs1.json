@@ -1,0 +1,11 @@
+{
+  "name": "img.zandbokz.crosshairs",
+  "sprtdefs" : [
+    {
+      "name" : "static",
+      "img" : "zandbokz.crosshairs",
+      "scale" : [1.0, 1.0],
+      "drawOffset" : [0.0, 0.0]
+    }
+  ]
+}

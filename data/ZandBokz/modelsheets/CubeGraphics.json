@@ -1,0 +1,9 @@
+{
+"name" : "Cube",
+"capability" : "001",
+"graphicdefs" : [
+  {
+    "name" : "Cube"
+  }
+]
+}

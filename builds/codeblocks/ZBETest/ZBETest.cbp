@@ -1,0 +1,355 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="ZBETest" />
+		<Option pch_mode="2" />
+		<Option compiler="gcc" />
+		<Build>
+			<Target title="Debug-Linux64">
+				<Option output="../../../bin/Debug/ZBETest" prefix_auto="1" extension_auto="1" />
+				<Option working_dir="../../../../ZBE" />
+				<Option object_output="obj/Debug/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-Weffc++" />
+					<Add option="-pedantic" />
+					<Add option="-Wextra" />
+					<Add option="-Wall" />
+					<Add option="-m64" />
+					<Add option="-g" />
+					<Add option="-std=c++17" />
+					<Add option="-isystem ../../../extlibs/googletest/1.7.0/include" />
+					<Add option="-isystem ../../../extlibs/json" />
+					<Add option="-isystem ../../../extlibs/glm/0.9.9.0" />
+					<Add option="-isystem ../../../extlibs/stb_vorbis" />
+					<Add directory="../../../src/ZBETest/include" />
+					<Add directory="../../../include" />
+					<Add directory="../../../extlibs/googletest/1.7.0/include" />
+					<Add directory="../../../extlibs/SDL2/2.0.8/include" />
+					<Add directory="../../../extlibs/SDL2_image/2.0.0/x86_64-linux-gcc/include" />
+					<Add directory="../../../extlibs/SDL2_ttf/2.0.12/x86_64-linux-gcc/include" />
+					<Add directory="../../../extlibs/boost_1_57_0" />
+					<Add directory="include" />
+					<Add directory="../../../extlibs/json" />
+					<Add directory="../../../extlibs/SDL2_net/2.0.1/include" />
+					<Add directory="../../../extlibs/SDL2/2.0.8/include/SDL2" />
+					<Add directory="../../../extlibs/GLEW/2.1.0/include" />
+					<Add directory="../../../extlibs/OALSoft/1.18.2/include" />
+					<Add directory="../../../extlibs/glm/0.9.9.0" />
+					<Add directory="../../../extlibs/imgui-1.76" />
+					<Add directory="../../../extlibs/imgui-1.76/examples" />
+				</Compiler>
+				<Linker>
+					<Add option="-m64" />
+					<Add library="gtest" />
+					<Add library="ZBE_x64d" />
+					<Add library="SDL2main" />
+					<Add library="SDL2" />
+					<Add library="SDL2_image" />
+					<Add library="SDL2_ttf" />
+					<Add library="SDL2_net" />
+					<Add library="pthread" />
+					<Add library="stdc++fs" />
+					<Add library="GLEW" />
+					<Add library="GL" />
+					<Add directory="../../../extlibs/googletest/1.7.0/lib/linux64" />
+					<Add directory="../../../extlibs/SDL2/2.0.8/linux64/lib" />
+					<Add directory="../../../extlibs/SDL2_image/2.0.0/x86_64-linux-gcc/lib" />
+					<Add directory="../../../extlibs/SDL2_ttf/2.0.12/x86_64-linux-gcc/lib" />
+					<Add directory="../../../lib" />
+					<Add directory="../../../extlibs/SDL2_net/2.0.1/linux/lib" />
+					<Add directory="../../../extlibs/GLEW/2.1.0/linux/lib" />
+				</Linker>
+			</Target>
+			<Target title="Release-Linux64">
+				<Option output="../../../bin/Release/ZBETest" prefix_auto="1" extension_auto="1" />
+				<Option working_dir="../../../../ZBE" />
+				<Option object_output="obj/Release/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-O2" />
+					<Add option="-Weffc++" />
+					<Add option="-Wextra" />
+					<Add option="-Wall" />
+					<Add option="-m64" />
+					<Add option="-std=c++17" />
+					<Add option="-isystem ../../../extlibs/googletest/1.7.0/include" />
+					<Add option="-isystem ../../../extlibs/json" />
+					<Add option="-isystem ../../../extlibs/glm/0.9.9.0" />
+					<Add option="-isystem ../../../extlibs/stb_vorbis" />
+					<Add option="-isystem ../../../extlibs/imgui-1.76" />
+					<Add directory="../../../src/ZBETest/include" />
+					<Add directory="../../../include" />
+					<Add directory="../../../extlibs/googletest/1.7.0/include" />
+					<Add directory="../../../extlibs/SDL2/2.0.8/include" />
+					<Add directory="../../../extlibs/SDL2_image/2.0.0/x86_64-linux-gcc/include" />
+					<Add directory="../../../extlibs/SDL2_ttf/2.0.12/x86_64-linux-gcc/include" />
+					<Add directory="../../../extlibs/boost_1_57_0" />
+					<Add directory="include" />
+					<Add directory="../../../extlibs/json" />
+					<Add directory="../../../extlibs/SDL2_net/2.0.1/include" />
+					<Add directory="../../../extlibs/SDL2/2.0.8/include/SDL2" />
+					<Add directory="../../../extlibs/GLEW/2.1.0/include" />
+					<Add directory="../../../extlibs/OALSoft/1.18.2/include" />
+					<Add directory="../../../extlibs/glm/0.9.9.0" />
+					<Add directory="../../../extlibs/imgui-1.76" />
+					<Add directory="../../../extlibs/imgui-1.76/examples" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+					<Add option="-m64" />
+					<Add library="gtest" />
+					<Add library="ZBE_x64" />
+					<Add library="SDL2main" />
+					<Add library="SDL2" />
+					<Add library="SDL2_image" />
+					<Add library="SDL2_ttf" />
+					<Add library="SDL2_net" />
+					<Add library="pthread" />
+					<Add library="stdc++fs" />
+					<Add library="GLEW" />
+					<Add library="GL" />
+					<Add directory="../../../extlibs/googletest/1.7.0/lib/linux64" />
+					<Add directory="../../../extlibs/SDL2/2.0.8/linux64/lib" />
+					<Add directory="../../../extlibs/SDL2_image/2.0.0/x86_64-linux-gcc/lib" />
+					<Add directory="../../../extlibs/SDL2_ttf/2.0.12/x86_64-linux-gcc/lib" />
+					<Add directory="../../../lib" />
+					<Add directory="../../../extlibs/SDL2_net/2.0.1/linux/lib" />
+					<Add directory="../../../extlibs/GLEW/2.1.0/linux/lib" />
+				</Linker>
+			</Target>
+			<Target title="Debug-Win64">
+				<Option output="../../../bin/Debug/ZBETest" prefix_auto="1" extension_auto="1" />
+				<Option working_dir="../../../../ZBE" />
+				<Option object_output="obj/Debug/" />
+				<Option type="1" />
+				<Option compiler="msys2_mingw_64-bit_compiler-920" />
+				<Compiler>
+					<Add option="-Weffc++" />
+					<Add option="-pedantic" />
+					<Add option="-Wextra" />
+					<Add option="-Wall" />
+					<Add option="-m64" />
+					<Add option="-g" />
+					<Add option="-isystem ..\..\..\extlibs\googletest\2017-05-14\include -D_GLIBCXX_USE_CXX11_ABI=0" />
+					<Add option="-isystem ../../../extlibs/json" />
+					<Add option="-std=c++17" />
+					<Add directory="../../../src/ZBETest/include" />
+					<Add directory="../../../include" />
+					<Add directory="../../../extlibs/googletest/2017-05-14/include" />
+					<Add directory="../../../extlibs/SDL2/2.0.8/include" />
+					<Add directory="../../../extlibs/SDL2/2.0.8/include/SDL2" />
+					<Add directory="../../../extlibs/SDL2_image/2.0.1/x86_64-w64-mingw32/include" />
+					<Add directory="../../../extlibs/SDL2_ttf/2.0.14/x86_64-w64-mingw32/include" />
+					<Add directory="../../../extlibs/SDL2_net/2.0.1/include" />
+					<Add directory="../../../extlibs/boost_1_57_0" />
+					<Add directory="include" />
+					<Add directory="../../../extlibs/json" />
+					<Add directory="../../../extlibs/GLEW/2.1.0/include" />
+					<Add directory="../../../extlibs/OALSoft/1.18.2/include" />
+					<Add directory="../../../extlibs/glm/0.9.9.0" />
+					<Add directory="../../../extlibs/imgui-1.76" />
+					<Add directory="../../../extlibs/imgui-1.76/examples" />
+				</Compiler>
+				<Linker>
+					<Add option="-m64" />
+					<Add library="mingw32" />
+					<Add library="gtest" />
+					<Add library="ZBE_x64d" />
+					<Add library="SDL2main" />
+					<Add library="SDL2" />
+					<Add library="SDL2_image" />
+					<Add library="SDL2_ttf" />
+					<Add library="SDL2_net" />
+					<Add library="glew32" />
+					<Add library="openGL32" />
+					<Add directory="../../../extlibs/googletest/2017-05-14/lib/win64" />
+					<Add directory="../../../extlibs/SDL2/2.0.8/x86_64-w64-mingw32/lib" />
+					<Add directory="../../../extlibs/SDL2_image/2.0.1/x86_64-w64-mingw32/lib" />
+					<Add directory="../../../extlibs/SDL2_ttf/2.0.14/x86_64-w64-mingw32/lib" />
+					<Add directory="../../../extlibs/SDL2_net/2.0.1/x86_64-w64-mingw32/lib" />
+					<Add directory="../../../lib" />
+					<Add directory="../../../extlibs/GLEW/2.1.0/windows/lib/Release/x64" />
+				</Linker>
+			</Target>
+			<Target title="Release-Win64">
+				<Option output="../../../bin/Release/ZBETest" prefix_auto="1" extension_auto="1" />
+				<Option working_dir="../../../../ZBE" />
+				<Option object_output="obj/Release/" />
+				<Option type="1" />
+				<Option compiler="msys2_mingw_64-bit_compiler-920" />
+				<Compiler>
+					<Add option="-O2" />
+					<Add option="-Weffc++" />
+					<Add option="-Wextra" />
+					<Add option="-Wall" />
+					<Add option="-m64" />
+					<Add option="-isystem ..\..\..\extlibs\googletest\2017-05-14\include -D_GLIBCXX_USE_CXX11_ABI=0" />
+					<Add option="-isystem ../../../extlibs/json" />
+					<Add option="-std=c++17" />
+					<Add directory="../../../src/ZBETest/include" />
+					<Add directory="../../../include" />
+					<Add directory="../../../extlibs/googletest/2017-05-14/include" />
+					<Add directory="../../../extlibs/SDL2/2.0.8/include" />
+					<Add directory="../../../extlibs/SDL2/2.0.8/include/SDL2" />
+					<Add directory="../../../extlibs/SDL2_image/2.0.1/x86_64-w64-mingw32/include" />
+					<Add directory="../../../extlibs/SDL2_ttf/2.0.14/x86_64-w64-mingw32/include" />
+					<Add directory="../../../extlibs/SDL2_net/2.0.1/include" />
+					<Add directory="../../../extlibs/boost_1_57_0" />
+					<Add directory="include" />
+					<Add directory="../../../extlibs/json" />
+					<Add directory="../../../extlibs/GLEW/2.1.0/include" />
+					<Add directory="../../../extlibs/OALSoft/1.18.2/include" />
+					<Add directory="../../../extlibs/glm/0.9.9.0" />
+					<Add directory="../../../extlibs/imgui-1.76" />
+					<Add directory="../../../extlibs/imgui-1.76/examples" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+					<Add option="-m64" />
+					<Add library="gtest" />
+					<Add library="ZBE_x64" />
+					<Add library="SDL2main" />
+					<Add library="SDL2" />
+					<Add library="SDL2_image" />
+					<Add library="SDL2_ttf" />
+					<Add library="SDL2_net" />
+					<Add library="glew32" />
+					<Add library="openGL32" />
+					<Add directory="../../../extlibs/googletest/2017-05-14/lib/win64" />
+					<Add directory="../../../extlibs/SDL2/2.0.8/x86_64-w64-mingw32/lib" />
+					<Add directory="../../../extlibs/SDL2_image/2.0.1/x86_64-w64-mingw32/lib" />
+					<Add directory="../../../extlibs/SDL2_ttf/2.0.14/x86_64-w64-mingw32/lib" />
+					<Add directory="../../../extlibs/SDL2_net/2.0.1/x86_64-w64-mingw32/lib" />
+					<Add directory="../../../lib" />
+					<Add directory="../../../extlibs/GLEW/2.1.0/windows/lib/Release/x64" />
+				</Linker>
+			</Target>
+		</Build>
+		<Compiler>
+			<Add option="-Wall" />
+			<Add option="-fexceptions" />
+		</Compiler>
+		<Unit filename="../../../extlibs/imgui-1.76/examples/imgui_impl_opengl3.cpp" />
+		<Unit filename="../../../extlibs/imgui-1.76/examples/imgui_impl_sdl.cpp" />
+		<Unit filename="../../../extlibs/imgui-1.76/imgui.cpp" />
+		<Unit filename="../../../extlibs/imgui-1.76/imgui_demo.cpp" />
+		<Unit filename="../../../extlibs/imgui-1.76/imgui_draw.cpp" />
+		<Unit filename="../../../extlibs/imgui-1.76/imgui_widgets.cpp" />
+		<Unit filename="../../../src/ZBETest/include/testutils/DummyTicket.h" />
+		<Unit filename="../../../src/ZBETest/include/testutils/MockedContextTime.h" />
+		<Unit filename="../../../src/ZBETest/src/JSON/graphics/JSONGraphicsLoadersTest.cpp" />
+		<Unit filename="../../../src/ZBETest/src/OAL/resources/OALAudioLoaderTest.cpp" />
+		<Unit filename="../../../src/ZBETest/src/SDL/RotatedSpriteSDLDrawerTest.cpp" />
+		<Unit filename="../../../src/ZBETest/src/SDL/SingleSpriteSDLDrawerTest.cpp" />
+		<Unit filename="../../../src/ZBETest/src/SDL/StatedSpriteSDLDrawerTest.cpp" />
+		<Unit filename="../../../src/ZBETest/src/SDL/daemons/SDLOGLWindowDaemonTest.cpp" />
+		<Unit filename="../../../src/ZBETest/src/SDL/daemons/SDLWindowDaemonTest.cpp" />
+		<Unit filename="../../../src/ZBETest/src/SDL/events/SDLEventDispatcherTest.cpp" />
+		<Unit filename="../../../src/ZBETest/src/SDL/factories/BasicPostLoopSDLDaemonFtryTest.cpp" />
+		<Unit filename="../../../src/ZBETest/src/SDL/factories/BasicPreLoopSDLDaemonFtryTest.cpp" />
+		<Unit filename="../../../src/ZBETest/src/SDL/factories/SDLImgLoaderFtryTest.cpp" />
+		<Unit filename="../../../src/ZBETest/src/SDL/factories/SDLOGLWindowDmnFtryTest.cpp" />
+		<Unit filename="../../../src/ZBETest/src/SDL/factories/SDLOGLWindowFtryTest.cpp" />
+		<Unit filename="../../../src/ZBETest/src/SDL/factories/SDLWindowFtryTest.cpp" />
+		<Unit filename="../../../src/ZBETest/src/SDL/resources/SDLImgLoaderTest.cpp" />
+		<Unit filename="../../../src/ZBETest/src/SDL/system/SDLWindowTest.cpp" />
+		<Unit filename="../../../src/ZBETest/src/archetypes/SimpleActivePhysicalObjectTest.cpp" />
+		<Unit filename="../../../src/ZBETest/src/archetypes/SimpleBouncingTest.cpp" />
+		<Unit filename="../../../src/ZBETest/src/archetypes/SimpleDampingTest.cpp" />
+		<Unit filename="../../../src/ZBETest/src/archetypes/SimpleDrawableTest.cpp" />
+		<Unit filename="../../../src/ZBETest/src/archetypes/SimpleMobileTest.cpp" />
+		<Unit filename="../../../src/ZBETest/src/archetypes/SimplePhysicalObjectTest.cpp" />
+		<Unit filename="../../../src/ZBETest/src/archetypes/SimplePositionTest.cpp" />
+		<Unit filename="../../../src/ZBETest/src/archetypes/SimpleWideTest.cpp" />
+		<Unit filename="../../../src/ZBETest/src/behavior/BounceTest.cpp" />
+		<Unit filename="../../../src/ZBETest/src/behavior/EraserTest.cpp" />
+		<Unit filename="../../../src/ZBETest/src/behavior/StateLTEraserTest.cpp" />
+		<Unit filename="../../../src/ZBETest/src/behavior/StateSetterTest.cpp" />
+		<Unit filename="../../../src/ZBETest/src/behavior/UniformLinearMotionTest.cpp" />
+		<Unit filename="../../../src/ZBETest/src/core/daemons/PunishersTest.cpp" />
+		<Unit filename="../../../src/ZBETest/src/core/daemons/daemonsTest.cpp" />
+		<Unit filename="../../../src/ZBETest/src/core/entities/AvatarEntityTest.cpp" />
+		<Unit filename="../../../src/ZBETest/src/core/entities/EntityTest.cpp" />
+		<Unit filename="../../../src/ZBETest/src/core/entities/avatars/InteractionerTest.cpp" />
+		<Unit filename="../../../src/ZBETest/src/core/entities/avatars/implementations/BaseAvatarTest.cpp" />
+		<Unit filename="../../../src/ZBETest/src/core/events/CollisionEventGeneratorTest.cpp" />
+		<Unit filename="../../../src/ZBETest/src/core/events/EventStoreTest.cpp" />
+		<Unit filename="../../../src/ZBETest/src/core/events/EventsTest.cpp" />
+		<Unit filename="../../../src/ZBETest/src/core/events/InputEventGeneratorTest.cpp" />
+		<Unit filename="../../../src/ZBETest/src/core/events/InteractionEventGeneratorTest.cpp" />
+		<Unit filename="../../../src/ZBETest/src/core/events/NetEventGeneratorTest.cpp" />
+		<Unit filename="../../../src/ZBETest/src/core/events/TimeEventGeneratorTest.cpp" />
+		<Unit filename="../../../src/ZBETest/src/core/events/generators/util/InputStatusManagerTest.cpp" />
+		<Unit filename="../../../src/ZBETest/src/core/io/FileHandlerTest.cpp" />
+		<Unit filename="../../../src/ZBETest/src/core/io/InputBufferTest.cpp" />
+		<Unit filename="../../../src/ZBETest/src/core/io/InputStatusTest.cpp" />
+		<Unit filename="../../../src/ZBETest/src/core/starters/SDL/SDL_StarterTest.cpp" />
+		<Unit filename="../../../src/ZBETest/src/core/system/LoggerTest.cpp" />
+		<Unit filename="../../../src/ZBETest/src/core/system/SysErrorTest.cpp" />
+		<Unit filename="../../../src/ZBETest/src/core/system/SysIdGeneratorTest.cpp" />
+		<Unit filename="../../../src/ZBETest/src/core/system/SysTimeTest.cpp" />
+		<Unit filename="../../../src/ZBETest/src/core/tools/SDLTimerTest.cpp" />
+		<Unit filename="../../../src/ZBETest/src/core/tools/containers/ListJointTest.cpp" />
+		<Unit filename="../../../src/ZBETest/src/core/tools/containers/RsrcDictionaryTest.cpp" />
+		<Unit filename="../../../src/ZBETest/src/core/tools/containers/RsrcStoreTest.cpp" />
+		<Unit filename="../../../src/ZBETest/src/core/tools/containers/TicketedElementTest.cpp" />
+		<Unit filename="../../../src/ZBETest/src/core/tools/containers/TicketedForwardListTest.cpp" />
+		<Unit filename="../../../src/ZBETest/src/core/tools/math/PointTest.cpp" />
+		<Unit filename="../../../src/ZBETest/src/core/tools/math/RegionTest.cpp" />
+		<Unit filename="../../../src/ZBETest/src/core/tools/math/VectorTest.cpp" />
+		<Unit filename="../../../src/ZBETest/src/core/tools/math/collisions/CollisionSystemSolverTest.cpp" />
+		<Unit filename="../../../src/ZBETest/src/core/tools/math/collisions/intersectionsTest.cpp" />
+		<Unit filename="../../../src/ZBETest/src/core/tools/math/mathTest.cpp" />
+		<Unit filename="../../../src/ZBETest/src/core/tools/math/objectsTest.cpp" />
+		<Unit filename="../../../src/ZBETest/src/core/tools/shared/implmentations/SimpleValueTest.cpp" />
+		<Unit filename="../../../src/ZBETest/src/core/tools/time/ContextTimeTest.cpp" />
+		<Unit filename="../../../src/ZBETest/src/core/tools/toolsTest.cpp" />
+		<Unit filename="../../../src/ZBETest/src/daemons/RsrcFolderLoaderDmnTest.cpp" />
+		<Unit filename="../../../src/ZBETest/src/daemons/RsrcLoaderDmnTest.cpp" />
+		<Unit filename="../../../src/ZBETest/src/events/handlers/actuators/DaemonSelectorAtorTest.cpp" />
+		<Unit filename="../../../src/ZBETest/src/events/handlers/time/DaemonRecurrentTimeHandlerTest.cpp" />
+		<Unit filename="../../../src/ZBETest/src/events/handlers/time/DaemonTimeHandlerTest.cpp" />
+		<Unit filename="../../../src/ZBETest/src/events/handlers/time/TicketEraserTest.cpp" />
+		<Unit filename="../../../src/ZBETest/src/factories/implementations/GenericFtryTest.cpp" />
+		<Unit filename="../../../src/ZBETest/src/factories/implementations/behaviors/StateLTEraserBhvFtryTest.cpp" />
+		<Unit filename="../../../src/ZBETest/src/factories/implementations/behaviors/StateSetterBhvFtryTest.cpp" />
+		<Unit filename="../../../src/ZBETest/src/factories/implementations/daemons/BehaviorDmnFtryTest.cpp" />
+		<Unit filename="../../../src/ZBETest/src/factories/implementations/daemons/MainLoopExitFtryTest.cpp" />
+		<Unit filename="../../../src/ZBETest/src/factories/implementations/daemons/MainLoopFtryTest.cpp" />
+		<Unit filename="../../../src/ZBETest/src/factories/implementations/daemons/MasterDmnFtryTest.cpp" />
+		<Unit filename="../../../src/ZBETest/src/factories/implementations/daemons/RsrcFolderLoaderDmnFtryTest.cpp" />
+		<Unit filename="../../../src/ZBETest/src/factories/implementations/daemons/RsrcLoaderDmnFtryTest.cpp" />
+		<Unit filename="../../../src/ZBETest/src/factories/implementations/daemons/StateMachineDmnFtryTest.cpp" />
+		<Unit filename="../../../src/ZBETest/src/factories/implementations/drawers/OGLModelSheetDrawerFtryTest.cpp" />
+		<Unit filename="../../../src/ZBETest/src/factories/implementations/drawers/SingleTextSDLDrawerFtryTest.cpp" />
+		<Unit filename="../../../src/ZBETest/src/factories/implementations/drawers/SpriteSheetSDLDrawerFtryTest.cpp" />
+		<Unit filename="../../../src/ZBETest/src/factories/implementations/entities/EntityFtryTest.cpp" />
+		<Unit filename="../../../src/ZBETest/src/factories/implementations/entities/avatars/BaseAvatarFtryTest.cpp" />
+		<Unit filename="../../../src/ZBETest/src/factories/implementations/entities/avatars/SimpleAnimatedSpriteFtryTest.cpp" />
+		<Unit filename="../../../src/ZBETest/src/factories/implementations/events/TimeEventFactoriesTest.cpp" />
+		<Unit filename="../../../src/ZBETest/src/factories/implementations/events/handlers/actuators/DmnSelectorAtorFtryTest.cpp" />
+		<Unit filename="../../../src/ZBETest/src/factories/implementations/events/handlers/actuators/StateChangerAtorFtryTest.cpp" />
+		<Unit filename="../../../src/ZBETest/src/factories/implementations/events/handlers/input/BroadcastIHFtryTest.cpp" />
+		<Unit filename="../../../src/ZBETest/src/factories/implementations/events/handlers/input/DaemonClickIHFtryTest.cpp" />
+		<Unit filename="../../../src/ZBETest/src/factories/implementations/events/handlers/input/DaemonIHFtryTest.cpp" />
+		<Unit filename="../../../src/ZBETest/src/factories/implementations/events/handlers/input/InputToValueFtryTest.cpp" />
+		<Unit filename="../../../src/ZBETest/src/factories/implementations/events/handlers/time/DaemonRecurrentTimeHandlerFtryTest.cpp" />
+		<Unit filename="../../../src/ZBETest/src/factories/implementations/events/handlers/time/DaemonTimeHandlerFtryTest.cpp" />
+		<Unit filename="../../../src/ZBETest/src/factories/implementations/events/handlers/time/TicketEraserFtryTest.cpp" />
+		<Unit filename="../../../src/ZBETest/src/factories/implementations/tools/graphics/CameraFryTest.cpp" />
+		<Unit filename="../../../src/ZBETest/src/graphics/MultiSpriteSheetTest.cpp" />
+		<Unit filename="../../../src/ZBETest/src/main.cpp" />
+		<Unit filename="../../../src/ZBETest/src/resources/loaders/ImgFolderLoaderTest.cpp" />
+		<Unit filename="../../../src/ZBETest/src/resources/loaders/RsrcLoadTest.cpp" />
+		<Unit filename="../../../src/ZBETest/src/resources/loaders/implementations/JSONAppLoaderTest.cpp" />
+		<Unit filename="../../../src/ZBETest/src/tools/graphics/CameraTest.cpp" />
+		<Extensions>
+			<code_completion />
+			<debugger />
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>

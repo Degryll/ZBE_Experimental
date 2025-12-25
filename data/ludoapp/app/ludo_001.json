@@ -1,0 +1,375 @@
+{
+  "meta" : {
+    "description" : "Zandbokz entry point Nos falta guardar SysTime en DEFAULT (common resource)"
+  },
+  "ids" : [
+    "TODO", "esto", "debería", "autogenerar", "ids", "Quizás", "queramos", "poner", "limitaciones", "de", "rango"
+  ],
+  "literals" : {
+    "window_title":"Zandbokz",
+    "ZERO" : {"type":"uifd", "value":0},
+    "ONE" : {"type":"uifd", "value":1},
+    "NEGATIVEONE" : {"type":"ifd", "value":-1},
+    "width" : {"type":"uifd", "value":1024},
+    "height" : {"type":"uifd", "value":768},
+    "gidIdx" : 1000,
+    "stateIdx" : 1010,
+    "degreesIdx" : 1020,
+    "positionIdx" : 1030,
+    "sizeIdx" : 1040,
+    "scaleIdx" : 1050,
+    "orientationIdx" : 1060,
+    "drawticket" : 2000,
+    "fovticket" : 3000,
+    "xticket" : 4000,
+    "yticket" : 4001,
+    "fovIdx" : 3100,
+    "state.static" : 0,
+    "testwflags": 0,
+    "testrflags": 0,
+    "timeEventId" : 1,
+    "mainInitialState" : 0,
+    "mainExitState" : 1,
+    "zandbokz.toMenu": 1,
+    "zandbokz.loadTime" : 2621440,
+    "cam.fov" :{"type":"f", "value":90.0},
+    "cam.aspect" :{"type":"f", "value":1.333333},
+    "cam.znear" :{"type":"f", "value":1.0},
+    "cam.zfar" :{"type":"f", "value":150.0},
+    "cam.fovMin" :{"type":"f", "value":30.0},
+    "cam.fovMax" :{"type":"f", "value":120.0},
+    "cam.fovPeriod" :{"type":"i", "value":65536},
+    "model.coordMin" :{"type":"f", "value":-10.0},
+    "model.coordMax" :{"type":"f", "value":10.0},
+    "model.coordPeriod" :{"type":"i", "value":45751},
+    "TODOindices":""
+  },
+  "phases":[
+      {
+        "description" : "Loading los valiu",
+        "factories" : [
+          {
+            "factory" : "SimpleValueFtry",
+            "name" : "zandbokz",
+            "config" : {
+              "int" : {
+                "loadState" : ["mainInitialState"]
+              },
+              "float" : {
+                "fov" : ["cam.fov"],
+                "aspect" : ["cam.aspect"],
+                "znear" : ["cam.znear"],
+                "zfar" : ["cam.zfar"]
+              },
+              "V3D" : {
+                "camEye" : [0.0, 3.0, 15.0],
+                "camTarget" : [0.0, 0.0, 0.0],
+                "camTargetOld" : [1.0, 0.0, 1.0],
+                "camUp" : [0.0, 1.0, 0.0]
+              }
+            }
+          }
+        ]
+      },
+      {
+      "description" : "Loading initial lists and high priority structures (window).",
+      "factories" : [
+        {
+          "factory": "TFAECModelFtry",
+          "description" : "do some serious sheet",
+          "name": "zandbokz.drawList",
+          "config" : {}
+        },
+        {
+          "factory": "TFAECFloatAvtFtry",
+          "description" : "do some serious sheet",
+          "name": "zandbokz.fovOscillatorList",
+          "config" : {}
+        },
+        {
+          "factory": "TFAECFloatAvtFtry",
+          "description" : "do some serious sheet",
+          "name": "zandbokz.coordOscillatorList",
+          "config" : {}
+        },
+        {
+          "factory": "CameraFtry",
+          "name": "zandbokz.cam",
+          "config" : {
+            "eye" : "zandbokz.camEye",
+            "target" : "zandbokz.camTarget",
+            "up" : "zandbokz.camUp",
+            "fov" : "zandbokz.fov",
+            "aspect" : "zandbokz.aspect",
+            "znear" : "zandbokz.znear",
+            "zfar" : "zandbokz.zfar"
+          }
+        },
+        {
+          "factory" : "SDLOGLWindowFtry",
+          "name" : "zandbokz.mainwindow",
+          "config" : {
+            "title" : "window_title",
+            "x" : "ZERO",
+            "y" : "ZERO",
+            "w" : "width",
+            "h" : "height",
+            "wflags":"testwflags",
+            "rflags":"testrflags"
+          }
+        }]
+      },
+      {
+      "description" : "Creating resource loaders.",
+      "factories" : [
+        {
+          "factory": "GlTFResourceLoaderFtry",
+          "name":"zandbokz.gltfLoader",
+          "config" : {
+            "window" : "zandbokz.mainwindow"
+          }
+        },
+        {
+          "factory": "JSONSimpleOGLModelSheetLoaderFtry",
+          "name":"zandbokz.msLoader",
+          "config" : {
+            "window" : "zandbokz.mainwindow"
+          }
+        },
+        {
+          "factory": "JSONGLSLProgramLoaderFtry",
+          "name":"zandbokz.glslLoader",
+          "config" : {
+            "window" : "zandbokz.mainwindow"
+          }
+        }
+      ]
+    },
+    {
+      "description" : "Loading images.",
+      "factories" : [
+        {
+          "factory": "RsrcFtry",
+          "name":"zandbokz.modelLoader",
+          "config" : {
+            "loader" : "zandbokz.gltfLoader",
+            "url" : "data/ZandBokz/models/gltf",
+            "urlBack" : "data/graphics3d"
+          }
+        },
+        {
+          "factory": "RsrcFtry",
+          "name":"zandbokz.programLoader",
+          "config" : {
+            "loader" : "zandbokz.glslLoader",
+            "url" : "data/ZandBokz/programs"
+          }
+        }
+      ]
+    },
+    {
+      "description" : "Loading sprite sheets.",
+      "factories" : [
+        {
+          "factory": "RsrcFtry",
+          "name":"zandbokz.modelSheetLoader",
+          "config" : {
+            "loader" : "zandbokz.msLoader",
+            "url" : "data/ZandBokz/modelsheets"
+          }
+        }
+      ]
+    },
+    {
+      "description" : "Creating entity",
+      "factories" : [
+        {"factory": "EntityFtry",
+          "name": "loadingLogo",
+          "description" : "El logo que se muestra en la pantalla de carga",
+          "config" : {
+            "uint": {
+              "gidIdx":["Pepino"]
+            },
+            "double": {
+              "degreesIdx":[50.0],
+              "scaleIdx":[1.5]
+            },
+            "V3D": {
+              "positionIdx":[1.0, 1.0, 0.0],
+              "orientationIdx":[0.5, 0.5, 0.5]
+            }
+          }
+        },
+        {"factory": "EntityFtry",
+          "name": "cameraController",
+          "description" : "Entidad asociada a la camara",
+          "TODO" : {
+            "eye" : "zandbokz.camEye",
+            "target" : "zandbokz.camTarget",
+            "up" : "zandbokz.camUp",
+            "fov" : "zandbokz.fov",
+            "aspect" : "zandbokz.aspect",
+            "znear" : "zandbokz.znear",
+            "zfar" : "zandbokz.zfar"
+          },
+          "config" : {
+            "float": {
+              "fovIdx":"zandbokz.fov"
+            },
+            "TODO": "asociar todos los values de la camara"
+          }
+        }
+      ]
+    },
+    {
+      "description" : "Loading load screen...",
+      "factories" : [
+        {"factory": "MasterDmnFtry",
+          "name": "Main",
+          "config" : {
+            "daemons": [
+              "zandbokz.MainLoop"
+            ]
+          }
+        },
+        {"factory": "MasterDmnFtry",
+          "name": "Behaviors",
+          "config" : {
+            "daemons": [
+              "zandbokz.fovOscillatorDaemon",
+              "zandbokz.coordOscillatorDaemon"
+            ]
+          }
+        },
+        {"factory": "MainLoopFtry",
+          "name": "zandbokz.MainLoop",
+          "config" : {
+            "preDaemon":"zandbokz.PreDaemon",
+            "preDaemonDesc":"done",
+            "eventDaemon":"zandbokz.eventGenerator",
+            "eventDaemonDesc":"done",
+            "commonDaemon":"Behaviors",
+            "commonDaemonDesc":"nada?vacio?",
+            "reactDaemon":"DEFAULT",
+            "reactDaemonDesc":"si hay evento de tiempo: se llama al exit... pero esto lo hace el eventStore.manage(): que esto se queda vacio",
+            "drawDaemon":"zandbokz.drawDaemon",
+            "drawDaemonDesc":"Pues a pintar la pantalla de carga",
+            "postDaemon":"zandbokz.PostDaemon",
+            "postDaemonDesc":"Hacer cosas de sdl",
+            "contextTime":"DEFAULT",
+            "contextTimeDesc":"el systime"
+          }
+        },
+        {"factory": "SDLSysTimeFtry",
+          "name": "zandbokz.SDLSysTime",
+          "config" : {}
+        },
+        {"factory": "OGLPreDrawFtry",
+          "name": "zandbokz.PreDaemon",
+          "config" : {
+            "window" : "zandbokz.mainwindow",
+            "camera" : "zandbokz.cam",
+            "programId": "base_program"
+          }
+        },
+        {"factory": "OGLPostDrawFtry",
+          "name": "zandbokz.PostDaemon",
+          "config" : {
+            "window" : "zandbokz.mainwindow"
+          }
+        },
+        {"factory": "TimeEventGnFtry",
+          "name": "zandbokz.eventGenerator",
+          "config" : {
+            "eventId" : "timeEventId",
+            "contextTime" : "DEFAULT"
+          }
+        },
+        {"factory": "MainLoopExitFtry",
+          "name": "zandbokz.exitDaemon",
+          "config" : {
+            "mainloop" : "zandbokz.MainLoop",
+            "valueHolder" : "zandbokz.loadState",
+            "outValue" : "mainExitState"
+          }
+        },
+        {"factory": "DaemonTimeHandlerFtry",
+          "name": "zandbokz.exitHandler",
+          "config" : {
+            "generator" : "zandbokz.eventGenerator",
+            "time" : "zandbokz.loadTime",
+            "dmn" : "zandbokz.exitDaemon"
+          }
+        },
+        {"factory": "OGLModelSheetDrawerFtry",
+          "name": "zandbokz.screenDrawer",
+          "description" : "comportamiento que pintara la pantalla. Faltan tipos",
+          "config" : {
+            "window" : "zandbokz.mainwindow",
+            "programId" : "base_program"
+          }
+        },
+        {"factory": "SineOscillatorFtry",
+          "name": "zandbokz.fovOscillator",
+          "description" : "Comportamiento que menea el fov",
+          "config" : {
+            "min" : "cam.fovMin",
+            "max" : "cam.fovMax",
+            "contextTime" : "DEFAULT",
+            "period" : "cam.fovPeriod"
+          }
+        },
+        {"factory": "SineOscillatorFtry",
+          "name": "zandbokz.coordOscillator",
+          "description" : "Comportamiento que menea el obojeto",
+          "config" : {
+            "min" : "model.coordMin",
+            "max" : "model.coordMin",
+            "contextTime" : "DEFAULT",
+            "period" : "model.coordPeriod"
+          }
+        },
+        {"factory": "DrawerModelDaemonFtry",
+          "name": "zandbokz.drawDaemon",
+          "description" : "demonio que pintara la pantalla. Faltan tipos",
+          "config" : {
+            "list" : "zandbokz.drawList",
+            "behavior" : "zandbokz.screenDrawer"
+          }
+        },
+        {"factory": "FloatAvtDaemonFtry",
+          "name": "zandbokz.fovOscillatorDaemon",
+          "description" : "demonio que menea el fov",
+          "config" : {
+            "list" : "zandbokz.fovOscillatorList",
+            "behavior" : "zandbokz.fovOscillator"
+          }
+        },
+        {"factory": "FloatAvtDaemonFtry",
+          "name": "zandbokz.coordOscillatorDaemon",
+          "description" : "demonio que menea el fov",
+          "config" : {
+            "list" : "zandbokz.coordOscillatorList",
+            "behavior" : "zandbokz.coordOscillator"
+          }
+        },
+        {"factory": "Drawable3DAvtFtry",
+          "name": "zandbokz.bgEnt",
+          "config" : {
+            "entity" : "loadingLogo",
+            "attribIndexes" : ["gidIdx", "scaleIdx", "degreesIdx", "orientationIdx", "positionIdx"],
+            "lists":{"zandbokz.drawList":"drawticket"}
+          }
+        },
+        {"factory": "FloatAvtFtry",
+          "name": "zandbokz.camFov",
+          "config" : {
+            "entity" : "cameraController",
+            "attribIndexes" : ["fovIdx"],
+            "lists":{"zandbokz.fovOscillatorList":"fovticket"}
+          }
+        }
+      ]
+    }
+  ]
+}

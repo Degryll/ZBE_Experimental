@@ -1,0 +1,11 @@
+{
+  "name": "img.zandbokz.background",
+  "sprtdefs" : [
+    {
+      "name" : "static",
+      "img" : "zandbokz.background",
+      "scale" : [0.7, 0.7],
+      "drawOffset" : [-0.1, -0.1]
+    }
+  ]
+}
